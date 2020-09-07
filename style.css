@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background: url(./images/bg-top.svg), url(./images/bg-bottom.svg) hsl(240, 78%, 98%);
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
+    background-size: 600px 550px, 600px 260px;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4vmax;
+    text-align: center;
+}
+
+header h1 {
+    color: hsl(233, 13%, 49%);
+    margin-bottom: 2.18rem;
+}
+
+#toggle_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+#toggle_menu p {
+    color: hsl(234, 14%, 74%);
+}
+
+.toggle_switch {
+    position: relative;
+    width: 48px;
+    height: 28px;
+    background-image: linear-gradient(to left, hsl(236, 72%, 79%), hsla(237, 62%, 39%, 0.2));
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.toggle_switch::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 24px;
+}
+
+.toggle_switch.active::before {
+    right: 24px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+section .card {
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 290px;
+    height: 365px;
+    text-align: center;
+}
+
+section .card.left {
+    border-radius: 8px 0 0 8px;
+}
+
+section .card.right {
+    border-radius: 0 8px 8px 0;
+}
+
+section .card.middle {
+    background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    box-shadow: 0 0 0 white;
+    border-radius: 8px;
+    color: white;
+    height: 401px;
+}
+
+section .card h4 {
+    margin-top: 1.56rem;
+    color: hsl(233, 13%, 49%);
+}
+
+section .card.middle h4 {
+    color: white;
+    margin-top: 2.68rem;
+}
+
+section .card p {
+    padding: 12px 0;
+    color: hsl(233, 13%, 49%);
+}
+
+section .card p .dollar {
+    display: inline-block;
+    font-size: 2.18rem; 
+    transform: translateY(-8px); 
+    margin-right: 5px;
+}
+
+section .card.middle p {
+    color: white;
+}
+
+section .card .price_tag {
+    font-size: 3.75rem;
+    margin: 2px 0 5px 0;
+    color: hsl(232, 13%, 33%);
+}
+
+section .card.middle .price_tag {
+    color: white;
+}
+
+section .card p:nth-child(4), p:nth-child(6) {
+    margin: 0 30px;
+    border-top: 1px solid hsl(234, 14%, 74%);
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+section .card .btn {  
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1px;  
+    width: 80%;
+    padding: 10px;
+    text-transform: uppercase;  
+    border-radius: 5px;
+    margin: 25px 0;
+    outline: none;
+    cursor: pointer;
+}
+
+section .card .btn.side {
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+    border: 2px solid hsl(234, 14%, 74%);
+}
+
+section .card .btn.side.blue {
+    background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+}
+
+section .card .btn.mid {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+section .card .btn.mid.white {
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+}
+
+section .card .price_tag.yearly {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: 100px 440px, 100px 260px;
+        height: auto;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    section .card {
+        margin-bottom: 1.25rem;
+    }
+
+    section .card.left {
+        border-radius: 10px;
+    }
+    
+    section .card.right {
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
